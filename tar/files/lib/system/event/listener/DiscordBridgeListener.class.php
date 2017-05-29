@@ -15,6 +15,10 @@ class DiscordBridgeListener implements IParameterizedEventListener {
      * @see \wcf\system\event\listener\IParameterizedEventListener::execute()
      */
     public function execute($eventObj, $className, $eventName, array &$parameters) {
+        if(DISCORD_WBB_BRIDGE_WEBHOOK_ID == '' && DISCORD_WBB_BRIDGE_WEBHOOK_TOKEN == ''){
+            return;
+        }
+
         switch ($eventObj->getActionName()) {
             case 'triggerPublication':
                 $objects = $eventObj->getObjects();
