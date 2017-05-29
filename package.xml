@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <package name="de.isekaidev.discord.wbbBridge" xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/package.xsd">
     <packageinformation>
-        <packagename><![CDATA[Discord WBB Bridge]]></packagename>
+        <packagename><![CDATA[Discord WSF Bridge]]></packagename>
         <packagedescription language="de"><![CDATA[Erstellt eine Nachricht in einem Discord Channel bei einem neu erstellten Thread oder Post]]></packagedescription>
         <packagedescription language="en"><![CDATA[Creates a message in a Discord Channel for a newly created thread or post.]]></packagedescription>
         <version>1.0.0</version>
