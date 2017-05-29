@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package name="de.isekaidev.discord.wbbBridge" xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/package.xsd">
+    <packageinformation>
+        <packagename><![CDATA[Discord WBB Bridge]]></packagename>
+        <packagedescription language="de"><![CDATA[Fügt der WoltLab Suite™ die grundlegenden Discord API Schnittstellen hinzu]]></packagedescription>
+        <packagedescription language="en"><![CDATA[Adds the basic Discord API interfaces to the WoltLab Suite™]]></packagedescription>
+        <version>1.0.0</version>
+        <date>2017-05-29</date>
+    </packageinformation>
+
+    <authorinformation>
+        <author>Tobias 'Mythen' Klein</author>
+        <authorurl>https://www.IsekaiDev.de/</authorurl>
+    </authorinformation>
+
+    <requiredpackages>
+        <requiredpackage minversion="3.0.0 RC 1">com.woltlab.wcf</requiredpackage>
+        <requiredpackage minversion="5.0.0 RC 1">com.woltlab.wbb</requiredpackage>
+        <requiredpackage minversion="1.0.1" file="packages/required/de.isekaidev.discord.api.tar">de.isekaidev.discord.api</requiredpackage>
+    </requiredpackages>
+
+    <excludedpackages>
+        <excludedpackage version="3.1.0 Alpha 1">com.woltlab.wcf</excludedpackage>
+        <excludedpackage version="5.1.0 Alpha 1">com.woltlab.wbb</excludedpackage>
+    </excludedpackages>
+
+    <instructions type="install">
+        <instruction type="language" />
+        <instruction type="file" application="wbb">tar/files.tar</instruction>
+        <instruction type="option">xml/option.xml</instruction>
+        <instruction type="eventListener">xml/eventListener.xml</instruction>
+    </instructions>
+</package>

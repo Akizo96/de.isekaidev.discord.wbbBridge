@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/maelstrom/option.xsd">
+    <import>
+        <categories>
+            <category name="discord.wbbBridge">
+                <parent>discord</parent>
+            </category>
+        </categories>
+        <options>
+            <option name="discord_wbb_bridge_webhook_id">
+                <categoryname>discord.wbbBridge</categoryname>
+                <optiontype>text</optiontype>
+            </option>
+            <option name="discord_wbb_bridge_webhook_token">
+                <categoryname>discord.wbbBridge</categoryname>
+                <optiontype>text</optiontype>
+            </option>
+            <option name="discord_wbb_bridge_ignore_boards">
+                <categoryname>discord.wbbBridge</categoryname>
+                <optiontype>WBBBoardMultiSelect</optiontype>
+            </option>
+        </options>
+    </import>
+</data>

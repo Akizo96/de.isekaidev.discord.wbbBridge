@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com https://www.woltlab.com/XSD/maelstrom/language.xsd" languagecode="de">
+    <category name="wcf.acp.option">
+        <item name="wcf.acp.option.category.discord.wbbBridge"><![CDATA[Forum Bridge]]></item>
+        <item name="wcf.acp.option.discord_wbb_bridge_webhook_id"><![CDATA[Webhook ID]]></item>
+        <item name="wcf.acp.option.discord_wbb_bridge_webhook_id.description"><![CDATA[TODO: write how to obtain webhook id & token]]></item>
+        <item name="wcf.acp.option.discord_wbb_bridge_webhook_token"><![CDATA[Webhook Token]]></item>
+        <item name="wcf.acp.option.discord_wbb_bridge_ignore_boards"><![CDATA[Foren ignorieren]]></item>
+    </category>
+    <category name="wcf.discord">
+        <item name="wcf.discord.answered"><![CDATA[Antwortete auf]]></item>
+        <item name="wcf.discord.created"><![CDATA[Erstellte den Thread]]></item>
+    </category>
+</language>
