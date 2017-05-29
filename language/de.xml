@@ -3,7 +3,7 @@
     <category name="wcf.acp.option">
         <item name="wcf.acp.option.category.discord.wbbBridge"><![CDATA[Forum Bridge]]></item>
         <item name="wcf.acp.option.discord_wbb_bridge_webhook_id"><![CDATA[Webhook ID]]></item>
-        <item name="wcf.acp.option.discord_wbb_bridge_webhook_id.description"><![CDATA[TODO: write how to obtain webhook id & token]]></item>
+        <item name="wcf.acp.option.discord_wbb_bridge_webhook_id.description"><![CDATA[Sie können <a href="{@$__wcf->getPath()}acp/dereferrer.php?url={'https://github.com/IsekaiDevPlugins/de.isekaidev.discord.wbbBridge/wiki/How-to-get-Webhook-ID-&-Token'|rawurlencode}" class="externalURL">hier</a> lesen, wie Sie Ihre Webhook ID & Token erhalten.]]></item>
         <item name="wcf.acp.option.discord_wbb_bridge_webhook_token"><![CDATA[Webhook Token]]></item>
         <item name="wcf.acp.option.discord_wbb_bridge_ignore_boards"><![CDATA[Foren ignorieren]]></item>
     </category>
