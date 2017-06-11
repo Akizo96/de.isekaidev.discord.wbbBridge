@@ -25,9 +25,13 @@
     </excludedpackages>
 
     <instructions type="install">
-        <instruction type="language" />
+        <instruction type="language"/>
         <instruction type="file" application="wbb">tar/files.tar</instruction>
         <instruction type="option">xml/option.xml</instruction>
         <instruction type="eventListener">xml/eventListener.xml</instruction>
+    </instructions>
+
+    <instructions type="update" fromversion="1.0.0">
+        <instruction type="file" application="wbb">tar/files.tar</instruction>
     </instructions>
 </package>
