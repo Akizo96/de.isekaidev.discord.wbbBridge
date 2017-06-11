@@ -4,8 +4,8 @@
         <packagename><![CDATA[Discord WSF Bridge]]></packagename>
         <packagedescription language="de"><![CDATA[Erstellt eine Nachricht in einem Discord Channel bei einem neu erstellten Thread oder Post]]></packagedescription>
         <packagedescription language="en"><![CDATA[Creates a message in a Discord Channel for a newly created thread or post.]]></packagedescription>
-        <version>1.0.0</version>
-        <date>2017-05-29</date>
+        <version>1.0.1</version>
+        <date>2017-06-11</date>
     </packageinformation>
 
     <authorinformation>

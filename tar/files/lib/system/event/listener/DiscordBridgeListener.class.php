@@ -28,7 +28,7 @@ class DiscordBridgeListener implements IParameterizedEventListener {
                 $postData = $objects[0];
                 $thread = $postData->getThread();
 
-                if(in_array($thread->boardID, explode("\n", DISCORD_WBB_BRIDGE_IGNORE_BOARDS))){
+                if (in_array($thread->boardID, explode("\n", DISCORD_WBB_BRIDGE_IGNORE_BOARDS))) {
                     return;
                 }
 
@@ -42,7 +42,7 @@ class DiscordBridgeListener implements IParameterizedEventListener {
 
                 $webhook = new Webhook(DISCORD_WBB_BRIDGE_WEBHOOK_ID, DISCORD_WBB_BRIDGE_WEBHOOK_TOKEN);
                 $webhook->addEmbed([
-                    'title' => ((strpos($postData->getTitle(), 'RE:') !== false) ? WCF::getLanguage()->get('wcf.discord.answered') : WCF::getLanguage()->get('wcf.discord.created')) . ' ' . (($postData->subject) ? $postData->subject : $thread->getTitle()),
+                    'title' => ((!$postData->isFirstPost()) ? WCF::getLanguage()->get('wcf.discord.answered') : WCF::getLanguage()->get('wcf.discord.created')) . ' ' . (($postData->subject) ? $postData->subject : $thread->getTitle()),
                     'url' => $postData->getLink(),
                     'author' => [
                         'name' => $user->getUsername(),
