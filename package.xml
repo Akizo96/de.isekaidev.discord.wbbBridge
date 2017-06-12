@@ -5,7 +5,7 @@
         <packagedescription language="de"><![CDATA[Erstellt eine Nachricht in einem Discord Channel bei einem neu erstellten Thread oder Post]]></packagedescription>
         <packagedescription language="en"><![CDATA[Creates a message in a Discord Channel for a newly created thread or post.]]></packagedescription>
         <version>1.0.1</version>
-        <date>2017-06-11</date>
+        <date>2017-06-13</date>
     </packageinformation>
 
     <authorinformation>
@@ -29,9 +29,5 @@
         <instruction type="file" application="wbb">tar/files.tar</instruction>
         <instruction type="option">xml/option.xml</instruction>
         <instruction type="eventListener">xml/eventListener.xml</instruction>
-    </instructions>
-
-    <instructions type="update" fromversion="1.0.0">
-        <instruction type="file" application="wbb">tar/files.tar</instruction>
     </instructions>
 </package>

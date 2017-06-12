@@ -4,6 +4,7 @@ namespace wbb\system\event\listener;
 
 use wcf\system\WCF;
 use wcf\data\user\User;
+use wcf\util\StringUtil;
 use wcf\data\user\UserProfile;
 use wcf\system\discord\Webhook;
 use wcf\system\html\output\HtmlOutputProcessor;
@@ -27,6 +28,7 @@ class DiscordBridgeListener implements IParameterizedEventListener {
                 }
                 $postData = $objects[0];
                 $thread = $postData->getThread();
+                $param = $eventObj->getParameters();
 
                 if (in_array($thread->boardID, explode("\n", DISCORD_WBB_BRIDGE_IGNORE_BOARDS))) {
                     return;
@@ -39,17 +41,18 @@ class DiscordBridgeListener implements IParameterizedEventListener {
 
                 $user = new User($postData->userID);
                 $userProfile = new UserProfile($user);
+                $firstPost = (isset($param['isFirstPost'])) ? $param['isFirstPost'] : false;
 
                 $webhook = new Webhook(DISCORD_WBB_BRIDGE_WEBHOOK_ID, DISCORD_WBB_BRIDGE_WEBHOOK_TOKEN);
                 $webhook->addEmbed([
-                    'title' => ((!$postData->isFirstPost()) ? WCF::getLanguage()->get('wcf.discord.answered') : WCF::getLanguage()->get('wcf.discord.created')) . ' ' . (($postData->subject) ? $postData->subject : $thread->getTitle()),
+                    'title' => ((!$firstPost) ? WCF::getLanguage()->get('wcf.discord.answered') : WCF::getLanguage()->get('wcf.discord.created')) . ' ' . (($postData->subject) ? $postData->subject : $thread->getTitle()),
                     'url' => $postData->getLink(),
                     'author' => [
                         'name' => $user->getUsername(),
                         'url' => $user->getLink(),
                         'icon_url' => $userProfile->getAvatar()->getURL()
                     ],
-                    'description' => (strlen($message) > 200) ? substr($message, 0, 197) . '...' : $message
+                    'description' => (strlen($message) > 512) ? substr($message, 0, 511) . StringUtil::convertEncoding('HTML-ENTITIES', 'UTF-8', '&#8230;') : $message
                 ]);
                 $webhook->send();
                 break;
